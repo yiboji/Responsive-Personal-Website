@@ -1,0 +1,97 @@
+App listening on port 8080
+[0mGET /api/todos [32m200 [0m27.822 ms - 415[0m
+Hello
+
+[0mGET /favicon.ico [32m200 [0m6.223 ms - 1544[0m
+request to resume
+
+[0mGET /resume [36m302 [0m7.467 ms - 122[0m
+Hello
+
+[0mGET /favicon.ico [36m304 [0m2.384 ms - -[0m
+Hello
+
+[0mGET /favicon.ico [36m304 [0m3.206 ms - -[0m
+Hello
+
+[0mGET /favicon.ico [36m304 [0m1.032 ms - -[0m
+just insert{ __v: 0, text: 'asdfsad', _id: 568eefab21db70045c000005 }
+[ { _id: '5685f0171ba171a33700004c',
+    text: 'asfasfd',
+    __v: 0,
+    timestamp: Thu Jan 07 2016 18:07:24 GMT-0500 (EST) },
+  { _id: '5685f0711ba171a337000055',
+    text: 'this is a mean stack web app',
+    __v: 0,
+    timestamp: Thu Jan 07 2016 18:07:24 GMT-0500 (EST) },
+  { _id: '568e10031ba171a337000086',
+    text: 'hello',
+    __v: 0,
+    timestamp: Thu Jan 07 2016 18:07:24 GMT-0500 (EST) },
+  { _id: '568eee5d03b7938b5b000001',
+    text: 'aasdas',
+    __v: 0,
+    timestamp: Thu Jan 07 2016 18:07:24 GMT-0500 (EST) },
+  { _id: '568eefab21db70045c000005',
+    text: 'asdfsad',
+    __v: 0,
+    timestamp: Thu Jan 07 2016 18:07:24 GMT-0500 (EST) } ]
+[0mPOST /api/todos [32m200 [0m70.121 ms - 514[0m
+request to resume
+
+[0mGET /resume [36m302 [0m2.870 ms - 122[0m
+Hello
+
+[0mGET /favicon.ico [36m304 [0m1.498 ms - -[0m
+Hello
+
+[0mGET /favicon.ico [36m304 [0m0.771 ms - -[0m
+Hello
+
+[0mGET /favicon.ico [36m304 [0m0.824 ms - -[0m
+[0mGET /api/todos [32m200 [0m8.058 ms - 514[0m
+Hello
+
+[0mGET /favicon.ico [32m200 [0m2.417 ms - 1544[0m
+Hello
+
+[0mGET /favicon.ico [36m304 [0m1.069 ms - -[0m
+Hello
+
+[0mGET /favicon.ico [36m304 [0m0.995 ms - -[0m
+Hello
+
+[0mGET /favicon.ico [36m304 [0m0.804 ms - -[0m
+Hello
+
+[0mGET /favicon.ico [32m200 [0m1.264 ms - 1544[0m
+Hello
+
+[0mGET /favicon.ico [36m304 [0m1.271 ms - -[0m
+[0mGET /api/todos [32m200 [0m3.516 ms - 514[0m
+Hello
+
+[0mGET /favicon.ico [32m200 [0m4.002 ms - 1544[0m
+request to resume
+
+[0mGET /resume [36m302 [0m6.248 ms - 122[0m
+Hello
+
+[0mGET /favicon.ico [36m304 [0m1.173 ms - -[0m
+Hello
+
+[0mGET /favicon.ico [36m304 [0m1.042 ms - -[0m
+Hello
+
+[0mGET /favicon.ico [36m304 [0m1.961 ms - -[0m
+Hello
+
+[0mGET /favicon.ico [32m200 [0m1.387 ms - 1544[0m
+[0mGET /api/todos [32m200 [0m3.939 ms - 514[0m
+Hello
+
+[0mGET /favicon.ico [32m200 [0m1.923 ms - 1544[0m
+[0mGET /api/todos [32m200 [0m3.835 ms - 514[0m
+Hello
+
+[0mGET /favicon.ico [32m200 [0m1.106 ms - 1544[0m

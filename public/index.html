@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset = "utf-8"">
+	<meta name="viewpoint" content="width=device-width,initial-scale=1">
+	<title>YIBO's HOME</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<style>
+		body {background-color:#1D092C}
+		#facebook {background-color:#08c}
+		#blog {background-color:#f37735}
+		#contact {background-color:#305B5E}
+		#profile {background-color:#E59A1A}
+		#resume {background-color:#44A5AC}
+		#linkedin {background-color:#0077B5}
+		#github {background-color:#3B3E45}
+		#project {background-color:rgb(67,181,31)}
+		.img-icon {width:5em; height:5em;position:relative;top:25%;left:35%}
+		.img-icon-resume{width:10em;height:10em;position:relative;top:26%;left:35%}
+		
+		.grid-title{width:100%;height:60px;margin:10px}
+		.grid-title span{position:absolute;bottom:0em;font-size:2.5em;color:white}
+		.grid-item{width:256px; height:144px;margin:10px}
+		.grid-item-2{width:533px;height:280px;margin:10px}
+		.grid-item-4{width:533px;height:443px;margin:10px}
+		.grid-item-4 img{width:20em;height:20em;position:relative;top:19%;left:25%}
+		.box {display:none}
+		.box span{position:absolute;bottom:0.5em;left:0.5em;font-size:1.3em;color:white;z-index:8;}
+		#facebook:hover,#blog:hover,#contact:hover,#profile:hover,#resume:hover,#linkedin:hover,#github:hover
+			{background-color:#F1F1F1;cursor:pointer;} 
+		#profile_back:hover,#contact_back:hover
+			{-webkit-filter:invert(50%);cursor:pointer;}
+		#profile-info tr,td{padding:5px}
+		#map {position:absolute;bottom:0em;left:0em;width:250px;height:300px;}
+	</style>
+<head>
+
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12 grid-title">
+				<span>Yibo Ji</span>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-lg-6">
+				<div class="row">
+					<div id="profile" class="box col-lg-6 col-md-6 grid-item ">
+						<img src="img/profile.png" class="img-icon" alt="blogicon">
+						<span>Profile</span>
+					</div>
+					<a href="#">
+					<div id="contact" class="col-lg-6 col-md-6 grid-item box">
+						<img src="img/contact.png" class="img-icon" alt="blogicon">
+						<span>Contact</span>
+					</div>
+					</a>
+				</div>
+				<div class="row">
+					<a href="/resume">
+					<div id="resume"class="col-lg-12 col-md-12  grid-item-2 box">
+						<img src="img/resume.png" class="img-icon-resume" alt="blogicon">
+						<span>Resume</span>
+					</div>
+					</a>
+				</div>
+				<div class="row">
+					<a href="#">
+					<div id="blog" class="col-lg-6 col-md-6  grid-item box">
+						<img src="img/blog.png" class="img-icon" alt="blogicon">
+						<span>Blog</span>
+					</div>
+					</a>
+					<a href="https://www.facebook.com/herrji">
+					<div id="facebook" class="col-lg-6 col-md-6 grid-item box">
+						<img  id="facebookimg" src="img/facebook.png" class="img-icon" alt="facebookicon">
+						<span>Facebook</span>
+					</div>
+					</a>
+				</div>
+			</div>
+			<div class="col-lg-6">
+				<div class="row">
+					<a href="#">
+					<div id="project" class="col-lg-12 col-md-12 grid-item-4 box">
+						<img src="img/construction.png" class="img-icon-project" alt="project">
+						<span>Projects&Intersts</span>
+					</div>
+					</a>
+				</div>
+				<div class="row">
+					<a href="https://www.linkedin.com/in/yibo-ji-16419ba6">
+					<div id="linkedin" class="col-lg-6 col-md-6 grid-item box">
+						<img  src="img/linkedin.png" class="img-icon" alt="facebookicon">
+						<span>LinkedIn</span>
+					</div>
+					</a>
+					<a href="https://github.com/yiboji">
+					<div id="github" class="col-lg-6 col-md-6 grid-item box">
+						<img src="img/github.png" class="img-icon" alt="blogicon">
+						<span>GitHub</span>
+					</div>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="container" style="display:none" id="profile-detail">
+		<div class="row" id="profile-nav" style="margin:10px">
+			<div class="col-lg-1 col-md-1" class="backarrow" id="profile_back">
+			<img src="img/backarrow.png" style="width:50px;height:50px" alt="left-arrow">
+			</div>
+			<div class="col-lg-3 col-md-2">
+					<span style="color:white;font-size:2.3em">Profile</span>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-lg-2" id="profile_photo" style="margin:5px">
+				<img src="img/ted.jpg" style="width:150px;height:150px" alt="photo">
+			</div>
+			<div class="col-lg-2" id="profile-name" style="margin:5px;color:white">
+				<h2>YIBO JI</h2>
+				<h5>Web Developer and</h5>
+				<h5>Embedded Software&Hardware<br/>Developer</h5>
+			</div>
+			<div class="col-lg-4" id="profile-info" style="margin:5px;background-color:#E59A1A;width:250px;height:300px;">
+				<table>
+					<tr>
+						<td>Birthday</td>
+						<td>11/11/1990</td>
+					<tr>
+					<tr>
+						<td>Country</td>
+						<td>China</td>
+					</tr>
+					<tr>
+						<td>Bio</td>
+						<td>I'm a Master student in University of Southern California. My major is Computer Science.</td>
+					</tr>
+				</table>
+				
+			</div>
+		</div>
+	</div>
+	<div class="container" style="display:none" id="contact-detail">
+		<div class="row" id="profile-nav" style="margin:10px">
+			<div class="col-lg-1 col-md-1" class="backarrow" id="contact_back">
+			<img src="img/backarrow.png" style="width:50px;height:50px" alt="left-arrow">
+			</div>
+			<div class="col-lg-2 col-md-2">
+					<span style="color:white;font-size:2.3em">Contact</span>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-lg-3" id="contact-info" style="color:white;margin:5px;background-color:#305B5E;width:250px;height:300px;">
+				<table>
+					<tr>
+						<td>Address</td>
+						<td>1247 W 30th St</td>
+					<tr>
+					<tr>
+						<td>City</td>
+						<td>Los Angeles</td>
+					</tr>
+					<tr>
+						<td>Country</td>
+						<td>United State</td>
+					</tr>
+					<tr>
+						<td>Email</td>
+						<td>ji.yibo1990@gmail.com</td>
+					</tr>
+				</table>
+				<label style="position:absolute;bottom:0.5em;left:.5em" >Contact Info</label>
+			</div>
+			<div class="col-lg-3" style="margin:5px;background-color:#305B5E;width:250px;height:300px">
+				<div class="col-lg-3" id="map"></div>
+			</div>
+			<div class="col-lg-3" style="margin:5px;background-color:#305B5E;width:250px;height:300px">
+				<form>
+					<input type="text" name="name" size="25" placeholder="Your Name" required/>
+					<input type="text" name="email" size="25" placeholder="Email" required/>
+					<textarea name="message" rows="5" cols="5" placeholder="Type Your Message" required/></textarea>
+					<input type="submit" value="submit"/>
+				</form>
+			</div>
+		</div>
+	</div>
+
+</body>
+<script src="http://maps.googleapis.com/maps/api/js"></script>
+<script>
+	
+	//google.maps.event.addDomListener(window,'load',initialize);
+</script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<script>
+	var home_done = false;
+	$(document).ready(function(){
+		home_fadein();
+	});
+	$(".box").hover(function(){
+		if($(this).is("#project")==false){
+			$(this).children('img').css({"-webkit-filter":"invert(100%)"});
+			$(this).children('span').css({"color":"#000000"})
+		}
+	},
+	function(){
+		$(this).children('img').css({"-webkit-filter":"invert(0%)"});
+		$(this).children('span').css({"color":"white"})
+	});
+
+	$("#profile").click(function(){
+		if(home_done==true)
+		home_fadeout(profile_fadein);
+	});
+	$("#profile_back").click(function(){
+		profile_fadeout(home_fadein);
+	});
+	$("#contact").click(function(){
+		if(home_done==true)
+		home_fadeout(contact_fadein);
+	});
+	$("#contact_back").click(function(){
+		contact_fadeout(home_fadein);
+	});
+
+	var home_fadein = function(){
+		var delay=80;
+		home_done = false;
+			$("#profile").fadeIn(delay,function(){
+				$("#contact").fadeIn(delay,function(){
+					$("#resume").fadeIn(delay,function(){
+						$("#blog").fadeIn(delay,function(){
+							$("#facebook").fadeIn(delay,function(){
+								$("#project").fadeIn(delay,function(){
+									$("#linkedin").fadeIn(delay,function(){
+										$("#github").fadeIn(delay);
+										home_done = true;
+									});
+								});
+							});
+						});
+					});
+				});
+			});
+	};
+	var home_fadeout= function(callback){
+		var delay=80;
+		home_done = false;
+			$("#github").fadeOut(delay,function(){
+				$("#linkedin").fadeOut(delay,function(){
+					$("#project").fadeOut(delay,function(){
+						$("#facebook").fadeOut(delay,function(){
+							$("#blog").fadeOut(delay,function(){
+								$("#resume").fadeOut(delay,function(){
+									$("#contact").fadeOut(delay,function(){
+										$("#profile").fadeOut(delay,function(){
+											callback();
+											home_done = true;
+										});
+									});
+								});
+							});
+						});
+					});
+
+				});
+			});
+	};
+	var profile_fadein = function(){
+		var delay = 80;
+		$("#profile-detail").css({"display":"block"});
+	};
+	var profile_fadeout = function(callback){
+		var delay = 80;
+		$("#profile-detail").css({"display":"none"});
+		callback();
+	};
+	var contact_fadein = function(){
+		$("#contact-detail").css({"display":"block"});
+		googlemap();
+	}
+	var contact_fadeout = function(callback){
+		$("#contact-detail").css({"display":"none"});
+		callback();
+	};
+	var googlemap = function (){
+		console.log("hello");
+		var mapCanvas = document.getElementById('map');
+		var myLatLng = {lat:34.0277,lng:-118.29267};
+		var mapOptions = {
+			center: myLatLng,
+			zoom:8,
+			mapTypeId:google.maps.MapTypeId.ROADMAP
+		}
+		var map = new google.maps.Map(mapCanvas,mapOptions)
+		var marker = new google.maps.Marker({
+			position:myLatLng,
+			map:map,
+			title:"CONTACT ME!"
+		});
+	}
+</script>
+</html>

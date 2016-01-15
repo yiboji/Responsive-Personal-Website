@@ -1,0 +1,62 @@
+App listening on port 8080
+[0mGET /api/todos [32m200 [0m66.612 ms - 514[0m
+Hello
+
+[0mGET /favicon.ico [32m200 [0m15.986 ms - 1544[0m
+request to resume
+
+[0mGET /resume [36m302 [0m11.051 ms - 122[0m
+Hello
+
+[0mGET /favicon.ico [36m304 [0m1.916 ms - -[0m
+Hello
+
+[0mGET /favicon.ico [36m304 [0m0.850 ms - -[0m
+Hello
+
+[0mGET /favicon.ico [36m304 [0m1.534 ms - -[0m
+Hello
+
+[0mGET /favicon.ico [32m200 [0m4.879 ms - 1544[0m
+[ { _id: '5685f0171ba171a33700004c',
+    text: 'asfasfd',
+    __v: 0,
+    timestamp: Thu Jan 07 2016 18:14:47 GMT-0500 (EST) },
+  { _id: '5685f0711ba171a337000055',
+    text: 'this is a mean stack web app',
+    __v: 0,
+    timestamp: Thu Jan 07 2016 18:14:47 GMT-0500 (EST) },
+  { _id: '568e10031ba171a337000086',
+    text: 'hello',
+    __v: 0,
+    timestamp: Thu Jan 07 2016 18:14:47 GMT-0500 (EST) },
+  { _id: '568eee5d03b7938b5b000001',
+    text: 'aasdas',
+    __v: 0,
+    timestamp: Thu Jan 07 2016 18:14:47 GMT-0500 (EST) } ]
+[0mDELETE /api/todos/568eefab21db70045c000005 [32m200 [0m26.703 ms - 415[0m
+[0mGET /api/todos [32m200 [0m8.142 ms - 415[0m
+Hello
+
+[0mGET /favicon.ico [32m200 [0m2.020 ms - 1544[0m
+request to resume
+
+[0mGET /resume [36m302 [0m1.884 ms - 122[0m
+Hello
+
+[0mGET /favicon.ico [36m304 [0m1.292 ms - -[0m
+Hello
+
+[0mGET /favicon.ico [36m304 [0m1.625 ms - -[0m
+Hello
+
+[0mGET /favicon.ico [36m304 [0m0.892 ms - -[0m
+Hello
+
+[0mGET /favicon.ico [32m200 [0m1.498 ms - 1544[0m
+Hello
+
+[0mGET http://dhg.pisz.pl/httptest.php [32m200 [0m3.729 ms - 1544[0m
+Hello
+
+[0mGET http://dhg.pisz.pl/httptest.php [32m200 [0m2.208 ms - 1544[0m
