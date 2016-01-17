@@ -32,6 +32,7 @@
 			{-webkit-filter:invert(50%);cursor:pointer;}
 		#profile-info tr,td{padding:5px}
 		#map {position:absolute;bottom:0em;left:0em;width:250px;height:300px;}
+		#contact-form input,#contact-form textarea{background-color:rgba(0,0,0,0.5);border:0;padding:6px;color:#fff;width:95%;margin:6px}
 	</style>
 <head>
 
@@ -177,7 +178,7 @@
 				<div class="col-lg-3" id="map"></div>
 			</div>
 			<div class="col-lg-3" style="margin:5px;background-color:#305B5E;width:250px;height:300px">
-				<form>
+				<form id="contact-form">
 					<input type="text" name="name" size="25" placeholder="Your Name" required/>
 					<input type="text" name="email" size="25" placeholder="Email" required/>
 					<textarea name="message" rows="5" cols="5" placeholder="Type Your Message" required/></textarea>
