@@ -1,0 +1,59 @@
+<html lang="en">
+<head>
+	<meta charset = "utf-8">
+	<meta name="viewpoint" content="width=device-width,initial-scale=1">
+	<title>YIBO's Profile</title>
+	<link href="/css/bootstrap.min.css" rel="stylesheet"/>
+	<link href="/css/mycss.css" rel="stylesheet"/>
+<head>
+
+<body>
+<div class="container" id="profile-detail">
+	<div class="row">
+		<div class="col-md-12 grid-title">
+			<span>Yibo Ji</span>
+		</div>
+	</div>
+	<div class="row" id="profile-nav" style="margin:10px">
+		<div class="col-lg-1 col-md-1 col-sm-1" class="backarrow" id="profile_back">
+		<img src="img/backarrow.png" style="width:50px;height:50px" alt="left-arrow">
+		</div>
+		<div class="col-lg-3 col-md-2 col-sm-2">
+				<span style="color:white;font-size:2.3em">Profile</span>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-lg-2" id="profile_photo" style="margin:5px">
+			<img src="img/ted.jpg" style="width:150px;height:150px" alt="photo">
+		</div>
+		<div class="col-lg-2" id="profile-name" style="margin:5px;color:white">
+			<h2>YIBO JI</h2>
+			<h5>Web Developer and</h5>
+			<h5>Embedded Software&Hardware<br/>Developer</h5>
+		</div>
+		<div class="col-lg-4" id="profile-info" style="margin:5px;background-color:#E59A1A;width:250px;height:300px;">
+			<table>
+				<tr>
+					<td>Birthday</td>
+					<td>11/11/1990</td>
+				<tr>
+				<tr>
+					<td>Country</td>
+					<td>China</td>
+				</tr>
+				<tr>
+					<td>Bio</td>
+					<td>I'm a Master student in University of Southern California. My major is Computer Science.</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+</div>
+<script src="js/jquery.min.js"></script>
+<script src="js/socket.io-1.2.0.js"></script>
+<script>
+var socket = io();
+$("#profile_back").click(function(){
+	window.location.href="http://yiboji.net";
+});
+</script>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset = "utf-8">
+	<meta name="viewpoint" content="width=device-width,initial-scale=1">
+	<title>YIBO's HOME</title>
+	<link href="/css/bootstrap.min.css" rel="stylesheet"/>
+	<link href="/css/mycss.css" rel="stylesheet"/>
+<head>
+
+<body>
+<div class="container" id="contact-detail">
+	<div class="row">
+		<div class="col-md-12 grid-title">
+			<span>Yibo Ji</span>
+		</div>
+	</div>
+
+	<div class="row" id="profile-nav" style="margin:10px">
+		<div class="col-lg-1 col-md-1 col-sm-1" class="backarrow" id="contact_back">
+		<img src="img/backarrow.png" style="width:50px;height:50px" alt="left-arrow">
+		</div>
+		<div class="col-lg-2 col-md-2 col-sm-2">
+				<span style="color:white;font-size:2.3em">Contact</span>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-lg-3" id="contact-info" style="color:white;margin:5px;background-color:#305B5E;width:250px;height:300px;">
+			<table>
+				<tr>
+					<td>Address</td>
+					<td>1247 W 30th St</td>
+				<tr>
+				<tr>
+					<td>City</td>
+					<td>Los Angeles</td>
+				</tr>
+				<tr>
+					<td>Country</td>
+					<td>United State</td>
+				</tr>
+				<tr>
+					<td>Email</td>
+					<td>ji.yibo1990@gmail.com</td>
+				</tr>
+			</table>
+			<label style="position:absolute;bottom:0.5em;left:.5em" >Contact Info</label>
+		</div>
+		<div class="col-lg-3" style="margin:5px;background-color:#305B5E;width:250px;height:300px">
+			<div class="col-lg-3" id="map"></div>
+		</div>
+		<div class="col-lg-3" style="color:#fff;text-align:center;margin:5px;background-color:#305B5E;width:250px;height:300px">
+			<label>Let's get in touch!</label>
+			<form id="contact-form">
+				<input type="text" name="name" size="25" placeholder="Your Name" required/>
+				<input type="text" name="email" size="25" placeholder="Email" required/>
+				<textarea name="message" rows="5" cols="5" placeholder="Type Your Message" required/></textarea>
+				<input type="submit" value="submit"/>
+			</form>
+		</div>
+	</div>
+</div>
+</body>
+<script src="http://maps.googleapis.com/maps/api/js"></script>
+<script src="js/jquery.min.js"></script>
+<script src="js/socket.io-1.2.0.js"></script>
+<script>
+	var socket = io();
+	$(document).ready(function(){
+		googlemap();
+	});
+	$("#contact_back").click(function(){
+		window.location.href="http://yiboji.net";
+	});
+	var googlemap = function (){
+		console.log("hello");
+		var mapCanvas = document.getElementById('map');
+		var myLatLng = {lat:34.027410,lng:-118.290479};
+		var mapOptions = {
+			center: myLatLng,
+			zoom:11,
+			mapTypeId:google.maps.MapTypeId.ROADMAP
+		}
+		var map = new google.maps.Map(mapCanvas,mapOptions)
+		var marker = new google.maps.Marker({
+			position:myLatLng,
+			map:map,
+			title:"CONTACT ME!"
+		});
+	}
+</script>

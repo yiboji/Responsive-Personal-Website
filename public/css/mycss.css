@@ -1,0 +1,32 @@
+body {background-color:#1D092C}
+#facebook {background-color:#08c}
+#blog {background-color:#f37735}
+#contact {background-color:#305B5E}
+#profile {background-color:#E59A1A}
+#resume {background-color:#44A5AC}
+#linkedin {background-color:#0077B5}
+#github {background-color:#3B3E45}
+#project {background-color:rgb(67,181,31)}
+.img-icon {width:5em; height:5em;position:relative;top:25%;left:35%}
+.img-icon-resume{width:10em;height:10em;position:relative;top:26%;left:35%}
+
+.grid-title{width:100%;height:60px;margin:10px}
+.grid-title span{position:absolute;bottom:0em;font-size:2.5em;color:white}
+.grid-item{width:256px; height:144px;margin:10px}
+.grid-item-2{width:533px;height:280px;margin:10px}
+.box {display:none}
+.box span{position:absolute;bottom:0.5em;left:0.5em;font-size:1.3em;color:white;z-index:8;}
+#facebook:hover,#blog:hover,#contact:hover,#profile:hover,#resume:hover,#linkedin:hover,#github:hover
+	{background-color:#F1F1F1;cursor:pointer;} 
+#profile_back:hover,#contact_back:hover,#project_back:hover
+	{-webkit-filter:invert(50%);cursor:pointer;}
+#profile-info tr,td{padding:5px}
+#map {position:absolute;bottom:0em;left:0em;width:250px;height:300px;}
+#contact-form input,#contact-form textarea{background-color:rgba(0,0,0,0.5);border:0;padding:6px;color:#fff;width:95%;margin:6px;resize:none}
+
+.grid-item-4{width:533px;height:443px;margin:10px;padding:0;overflow:hidden}
+#project ul{margin:0;padding:0;height:443px;display:block;}
+#project ul li{float:left;list-style-type:none;width:533px;height:443px}
+#project ul li img{width:100%;height:100%}
+#project:hover{cursor:pointer}
+

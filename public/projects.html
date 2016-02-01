@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset = "utf-8">
+	<meta name="viewpoint" content="width=device-width,initial-scale=1">
+	<title>YIBO's HOME</title>
+	<link href="/css/bootstrap.min.css" rel="stylesheet"/>
+	<link href="/css/mycss.css" rel="stylesheet"/>
+	<style>
+		.title {color:white;font-size:17px}
+		.holder {background-color:#BE4F3B;width:235px;height:64px;padding:0;margin:10px;color:white}
+		.img-holder{padding:0;margin-top:7px;float:left;width:45px;height:45px;position:relative;top:2%;left:2% }
+		.img-demo{width:100%;height:100%}
+		.text-holder{width:164px;height:50px;padding:0;margin-left:20px;margin-top:5px;float:left;color:white;word-break:keep-all}
+		.text-holder span{font-size:1.3em}
+	</style>
+<head>
+<body>
+	<div class="container" style="width:80%" id="project-detail">
+		<div class="row">
+			<div class="col-md-12 grid-title">
+				<span>Yibo Ji</span>
+			</div>
+		</div>
+		<div class="row" id="project-nav" style="margin:10px">
+			<div class="col-lg-1 col-md-1 col-sm-1" class="backarrow" id="project_back">
+				<img src="img/backarrow.png" style="width:50px;height:50px" alt="left-arrow">
+			</div>
+			<div class="col-lg-2 col-md-2 col-sm-2">
+				<span style="color:white;font-size:2.3em">Projects</span>
+			</div>
+		</div>
+		<div class="row" id="project-content" style="margin-top:40px">
+
+			<div class="col-lg-3 col-md-6">
+				<div class="row">
+					<div class="col-lg-12 title" id="web-title">
+						<span>Web Demos></span>
+					</div>
+				</div>
+				<div class="row web-content">
+					<div class="col-lg-12 holder" id="tracker">
+						<div class="img-holder"><img src="img/analytics.png" class="img-demo" alt="tracker"></div>
+						<div class="text-holder"><span>Website visitor tracking</span></div>
+					</div>
+				</div>
+				<div class="row web-content">
+					<div class="col-lg-12 holder" id="m-shop">
+						<div class="img-holder"><img src="img/shopping.png" class="img-demo" alt="manager-shopping"></div>
+						<div class="text-holder"><span>Manage-side of shopping website</span></div>
+					</div>
+				</div>
+				<div class="row web-content">
+					<div class="col-lg-12 holder" id="c-shop">
+						<div class="img-holder"><img src="img/shopping.png" class="img-demo" alt="cutomer-shopping"></div>
+						<div class="text-holder"><span>Customer-side of shopping website</span></div>
+					</div>
+				</div>
+				<div class="row web-content">
+					<div class="col-lg-12 holder">
+						<div class="img-holder"><img src="img/chat.png" class="img-demo" alt="char-room"></div>
+						<div class="text-holder"><span>Online chatting room</span></div>
+					</div>
+				</div>
+				<div class="row web-content">
+					<div class="col-lg-12 holder" id="c-forms">
+						<div class="img-holder" style="margin-left:5px"><img src="img/form.png" class="img-demo" alt="forms"></div>
+						<div class="text-holder"><span>Dynamic client-side forms</span></div>
+					</div>
+				</div>
+
+			</div>
+
+			<div class="col-lg-3 col-md-6">
+				<div class="row">
+					<div class="col-lg-12 title" id="programming-title">
+						<span>Programming></span>
+					</div>
+				</div>
+				<div class="row prog-content">
+					<div class="col-lg-12 holder" id="t-game">
+						<div class="img-holder" style="margin-left:5px"><img src="img/tower.png" class="img-demo" alt="tower defense"></div>
+						<div class="text-holder"><span>iOS tower defense game</span></div>
+					</div>
+				</div>
+				<div class="row prog-content">
+					<div class="col-lg-12 holder" id="weenix">
+						<div class="img-holder" style="margin-left:5px"><img src="img/os.png" class="img-demo" alt="weenix"></div>
+						<div class="text-holder" style="margin-top:18px"><span>Weenix OS hacking</span></div>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-lg-3 col-md-6">
+				<div class="row">
+					<div class="col-lg-12 title" id="linux-title">
+						<span>Embedded System&Linux></span>
+					</div>
+				</div>
+				<div class="row car-content">
+					<div class="col-lg-12 holder" id="weenix">
+						<div class="img-holder" style="margin-left:5px"><img src="img/car.png" class="img-demo" alt="car"></div>
+						<div class="text-holder"><span></span></div>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-lg-3 col-md-6">
+				<div class="row">
+					<div class="col-lg-12 title" id="car-title">
+						<span>Intelligent Car></span>
+					</div>
+				</div>
+				<div class="row car-content">
+					<div class="col-lg-12 holder" id="car">
+						<div class="img-holder" style="margin-left:5px"><img src="img/car.png" class="img-demo" alt="car"></div>
+						<div class="text-holder"><span>Intelligent auto-racing model car</span></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+<script src="js/jquery.min.js"></script>
+<script src="js/socket.io-1.2.0.js"></script>
+<script>
+	var socket = io();
+	$(document).ready(function(){
+	});
+	$("#project_back").click(function(){
+		window.location.href="http://yiboji.net";
+	});
+	$(".holder").hover(function(){
+			console.log("hello");
+			$(this).css({"background-color":"#FFF","cursor":"pointer"});
+			$(this).children('.img-holder').children('img').css({"-webkit-filter":"invert(100%)"});
+			$(this).children('.text-holder').children('span').css({"color":"#000000"})
+	},function(){
+			$(this).css({"background-color":"#BE4F3B","cursor":"none"});
+			$(this).children('.img-holder').children('img').css({"-webkit-filter":"invert(0%)"});
+			$(this).children('.text-holder').children('span').css({"color":"white"})
+
+	});
+	$("#c-shop").click(function(){
+		window.location.href="http://cs-server.usc.edu:62526/myhomework3/mainpage.php";
+	});
+	$("#m-shop").click(function(){
+		window.location.href="http://cs-server.usc.edu:62526/myhomework2/login.php";
+	});
+	$("#c-forms").click(function(){
+		window.location.href="http://cs-server.usc.edu:62526/myhomework1.html";
+	});
+	$("#tracker").click(function(){
+		window.location.href="http://yiboji.net/projects/analytics";
+	});
+</script>
