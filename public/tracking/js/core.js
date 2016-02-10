@@ -1,6 +1,21 @@
 var tracker = angular.module('tracker',[]);
+/*
+//controller part
+tracker.config(['ChartJsProvider', function (ChartJsProvider) {
+	// Configure all charts
+	ChartJsProvider.setOptions({
+	  //colours: ['#FF5252', '#FF8A80'],
+	  responsive: false
+	});
+	// Configure all line charts
+	ChartJsProvider.setOptions('Line', {
+	  //datasetFill: false
+	});
+}]);
+*/
 
-function mainController($scope,$http){
+tracker.controller("mainController",['$scope','$http',function($scope,$http){
+	$scope.series = ["Visitor interesting"];
 	$http.get("http://yiboji.net/api/tracker")
 		.success(function(data){
 			console.log("data:"+data);	
@@ -10,6 +25,14 @@ function mainController($scope,$http){
 			var session_id = data[data.length-1]; 
 			var curVisitor = new Object();
 			console.log("session is "+session_id);
+			var profile = 0;
+			var contact = 0;
+			var resume = 0;
+			var project = 0;
+			var blog = 0;
+			var facebook = 0;
+			var linkedin = 0;
+
 			for(item=0; item<data.length-1;item++){
 				var tmp = new Object();
 				tmp.latLng = new Array();
@@ -36,7 +59,36 @@ function mainController($scope,$http){
 					res.push(data[item]);	
 				}
 			}
+			for(var item in data){
+				if(data[item].profile)
+					profile+=data[item].profile;
+				if(data[item].contact)
+					contact += data[item].contact;
+				if(data[item].resume)
+					resume += data[item].resume;
+				if(data[item].project)
+					project += data[item].project;
+				if(data[item].blog)
+					blog += data[item].blog;
+				if(data[item].facebook)
+					facebook += data[item].facebook;
+				if(data[item].linkedin)
+					linkedin += data[item].linkedin;
+			}
+			var sorted = new Array();
+			sorted.push({key:'profile',val:profile});
+			sorted.push({key:'contact',val:contact});
+			sorted.push({key:'resume',val:resume});
+			sorted.push({key:'project',val:project});
+			sorted.push({key:'blog',val:blog});
+			sorted.push({key:'facebook',val:facebook});
+			sorted.push({key:'linkedin',val:linkedin});
+			sorted = sorted.sort(function(a,b){
+				return b.val-a.val;
+			});
+			console.log("sorted data are: "+sorted);
 			$scope.trackdata = res;
+			$scope.sorteddate = sorted;
 			$('#world-map-markers').vectorMap({
 				map: 'world_mill_en',
 				scaleColors:['#C8EEFF','#0071A4'],
@@ -81,8 +133,57 @@ function mainController($scope,$http){
 					str += "THANK YOU FOR VISITING!";
 					alert(str);
 			}
+						
 		})
 		.error(function(err){
 			console.log("ERROR:"+err);	
 		});
-}
+}]);
+/*
+tracker.controller("LineCtrl",['$scope','$http',function($scope,$http){
+	$scope.series = ["Visitor interesting"];
+	$scope.data = [[]];
+	var tmp = new Object();
+	var profile = 0;
+	var contact = 0;
+	var resume = 0;
+	var project = 0;
+	var blog = 0;
+	var facebook = 0;
+	var linkedin = 0;
+	$http.get('/api/tracker')
+		.success(function(data){
+		console.log("Client:initial get"+data);
+		for(var item in data){
+			if(data[item].profile)
+				profile+=data[item].profile;
+			if(data[item].contact)
+				contact += data[item].contact;
+			if(data[item].resume)
+				resume += data[item].resume;
+			if(data[item].project)
+				project += data[item].project;
+			if(data[item].blog)
+				blog += data[item].blog;
+			if(data[item].facebook)
+				facebook += data[item].facebook;
+			if(data[item].linkedin)
+				linkedin += data[item].linkedin;
+		}
+		console.log(profile+","+contact+","+resume+","+project+","+facebook+","+linkedin);
+		$scope.data[0].push(profile);	
+		$scope.data[0].push(contact);	
+		$scope.data[0].push(resume);	
+		$scope.data[0].push(project);	
+		$scope.data[0].push(blog);	
+		$scope.data[0].push(facebook);	
+		$scope.data[0].push(linkedin);	
+		})
+		.error(function(err){
+			console.log("client:ERROR:"+err);
+		});
+	$scope.onClick = function(points,evt){
+		console.log(points,evt);
+	};
+}]);
+*/

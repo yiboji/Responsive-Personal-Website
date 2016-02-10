@@ -168,13 +168,14 @@ app.get('/contact',function(req,res){
 	}
 	res.sendfile('./public/contact.html');
 });
+
 app.get('/projects',function(req,res){
 	console.log("request to projects\n");
 	if(req.session.project){
 		req.session.project+= 1;
 	}
 	else{
-		req.session.project= 1;
+		req.session.project=1;
 	}
 	if(req.session._id){
 		var query = {_id:req.session._id};
@@ -189,13 +190,39 @@ app.get('/projects',function(req,res){
 	}
 	res.sendfile('./public/projects.html');
 });
-app.get('/projects/test',function(req,res){
-	res.sendfile('./public/my-first-video-post.html');
+app.get('/projects/smartcar',function(req,res){
+	console.log("request to smartcar\n");
+	res.sendfile('./public/project_files/smartcar.html');
 });
 app.get('/projects/analytics',function(req,res){
 	console.log("request to tracker\n");
 	res.sendfile('./public/tracking/tracker.html');
 });
+app.get('/projects/game',function(req,res){
+	console.log("request to smartcar\n");
+	res.sendfile('./public/project_files/tower.html');
+});
+app.get('/projects/weenix',function(req,res){
+	console.log("request to smartcar\n");
+	res.sendfile('./public/project_files/weenix.html');
+});
+app.get('/projects/socket',function(req,res){
+	console.log("request to smartcar\n");
+	res.sendfile('./public/project_files/socket.html');
+});
+app.get('/projects/audio',function(req,res){
+	console.log("request to smartcar\n");
+	res.sendfile('./public/project_files/audio.html');
+});
+app.get('/projects/linux',function(req,res){
+	console.log("request to smartcar\n");
+	res.sendfile('./public/project_files/linux.html');
+});
+app.get('/projects/gateway',function(req,res){
+	console.log("request to smartcar\n");
+	res.sendfile('./public/project_files/gateway.html');
+});
+
 app.get('/api/tracker',function(req,res){
 	console.log("request to api/tracker");
 	var sort = {'_id':-1};
@@ -206,6 +233,22 @@ app.get('/api/tracker',function(req,res){
 		var session = req.session._id;
 		data.push(session);
 		res.json(data);
+	});
+});
+app.get('/api/freq',function(req,res){
+	console.log("request to get visitor interests");
+	var agg = [
+		{$group:{_id:"profile",profilesum:{$sum:"$profile"}}},
+		{$group:{_id:"contact",contactsum:{$sum:"$contact"}}},
+		{$group:{_id:"resume",resumesum:{$sum:"$resume"}}},
+		{$group:{_id:"project",projectsum:{$sum:"$projectsum"}}},
+		{$group:{_id:"blog",blogsum:{$sum:"$blog"}}},
+		{$group:{_id:"facebook",facebooksum:{$sum:"$facebook"}}},
+		{$group:{_id:"linkedin",linkedinsum:{$sum:"$linkedin"}}}
+	];
+	visitor.aggregate(agg,function(err, result){
+		if(err) console.log(err);
+		console.log(result);
 	});
 });
 app.get('*',function(req,res){
