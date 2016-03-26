@@ -222,7 +222,10 @@ app.get('/projects/gateway',function(req,res){
 	console.log("request to smartcar\n");
 	res.sendfile('./public/project_files/gateway.html');
 });
-
+app.get('/projects/miniprojects',function(req,res){
+	console.log("request to smartcar\n");
+	res.sendfile('./public/project_files/miniprojects.html');
+});
 app.get('/api/tracker',function(req,res){
 	console.log("request to api/tracker");
 	var sort = {'_id':-1};

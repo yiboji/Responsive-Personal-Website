@@ -1,0 +1,27 @@
+// Variables
+// ==================================================
+
+// Colors
+// -------------------------
+
+$color-black: #000 !default;
+$color-white: #fff !default;
+$color-grey: #ccc !default;
+
+
+// Media queries breakpoints
+// -------------------------
+
+// Large screen / wide desktop
+$screen-lg-min: 1200px;
+
+// Medium screen / desktop
+$screen-md-min: 992px;
+$screen-md-max: ($screen-lg-min - 1);
+
+// Small screen / tablet
+$screen-sm-min: 768px;
+$screen-sm-max: ($screen-md-min - 1);
+
+// Extra small screen / phone
+$screen-xs-max: ($screen-sm-min - 1);

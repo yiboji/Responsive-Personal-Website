@@ -32,60 +32,67 @@
 			</div>
 		</div>
 		<div class="row" >
-			<div class="row" style="padding-left:15px" >
-				<div class="col-lg-6" style="text-align:center">
-				<h2>Visitor Table</h2>
+			<div class="col-lg-6">
+				<div class="row" style="padding-left:15px" >
+					<div class="col-lg-12" style="text-align:center">
+					<h2>Visitor Table</h2>
+					</div>
 				</div>
-				<div class="col-lg-6" style="text-align:center">
-				<h2>Most Frequently Accessed Items</h2>
-			</div>
-			</div>
-			<div class="row" style="padding-left:15px">
-				<div class="col-lg-6" style="height:500px;overflow:scroll">
-					<table class="table-striped">
-						<tr>
-							<td>Visit Time</td>
-							<td>City</td>
-							<td>Visitor IP</td>
-						</tr>
-						<tr ng-repeat="item in trackdata">
-							<td>{{item.time}}</td>
-							<td>{{item.city}}</td>
-							<td>{{item.ip}}<br/>
-							<span>visited: 
-							{{item.profile&&"profile,"||""}} 
-							{{item.contact&&"contact,"||""}}
-							{{item.resume&&"resume,"||""}}
-							{{item.project&&"project,"||""}}
-							{{item.facebook&&"facebook,"||""}}
-							{{item.linkedin&&"linkedin,"||""}}
-							{{item.github&&"github,"||""}}</span></td>
-						</tr>
-					</table>
-				</div>
-				<div class= "col-lg-6" id="chart"><!-- ng-controller="LineCtrl"-->
-					<table class="table-striped" style="width:100%">
-						<tr>
-							<td>Content</td>
-							<td>Accessed Times</td>
-						</tr>
-						<tr ng-repeat="item in sorteddate">
-							<td>{{item.key}}</td>
-							<td>{{item.val}}</td>
-						</tr>
-					</table>
-
+				<div class="row" style="padding-left:15px">
+					<div class="col-lg-12" style="height:500px;overflow:scroll">
+						<table class="table-striped table-hover">
+							<tr>
+								<td>Visit Time</td>
+								<td>City</td>
+								<td>Visitor IP</td>
+							</tr>
+							<tr ng-repeat="item in trackdata">
+								<td>{{item.time}}</td>
+								<td>{{item.city}}</td>
+								<td>{{item.ip}}<br/>
+								<span>visited: 
+								{{item.profile&&"profile,"||""}} 
+								{{item.contact&&"contact,"||""}}
+								{{item.resume&&"resume,"||""}}
+								{{item.project&&"project,"||""}}
+								{{item.facebook&&"facebook,"||""}}
+								{{item.linkedin&&"linkedin,"||""}}
+								{{item.github&&"github,"||""}}</span></td>
+							</tr>
+						</table>
+					</div>
 				</div>
 			</div>
+			<div class="col-lg-6">
+				<div class="row" style="padding-left:15px" >
+					<div class="col-lg-12" style="text-align:center">
+						<h2>Most Frequently Accessed Items</h2>
+					</div>
+				</div>
+				<div class="row" style="padding-left:15px" >
+					<div class= "col-lg-12" id="chart"><!-- ng-controller="LineCtrl"-->
+						<table class="table-striped table-hover" style="width:100%">
+							<tr>
+								<td>Content</td>
+								<td>Accessed Times</td>
+							</tr>
+							<tr ng-repeat="item in sorteddate">
+								<td>{{item.key}}</td>
+								<td>{{item.val}}</td>
+							</tr>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
 			<div class="row">
 				<div id="footer">
 				</div>
 			</div>
-		</div>
 	</div>
 </body>
 <script src="/js/jquery.min.js"></script>
-<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<!--<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>-->
 <script src="/tracking/js/jquery-jvectormap-2.0.3.min.js"></script>
 <script src="/tracking/js/jquery-jvectormap-world-mill-en.js"></script>
 <script src="/tracking/js/angular.min.js"></script><!-- load angular -->

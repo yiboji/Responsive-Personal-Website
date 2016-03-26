@@ -15,16 +15,16 @@ tracker.config(['ChartJsProvider', function (ChartJsProvider) {
 */
 
 tracker.controller("mainController",['$scope','$http',function($scope,$http){
-	$scope.series = ["Visitor interesting"];
+	//$scope.series = ["Visitor interesting"];
 	$http.get("http://yiboji.net/api/tracker")
 		.success(function(data){
-			console.log("data:"+data);	
+			//console.log("data:"+data);	
 			var res = new Array();
 			var arr = new Array();
 			var item;
 			var session_id = data[data.length-1]; 
 			var curVisitor = new Object();
-			console.log("session is "+session_id);
+			//console.log("session is "+session_id);
 			var profile = 0;
 			var contact = 0;
 			var resume = 0;
@@ -60,19 +60,21 @@ tracker.controller("mainController",['$scope','$http',function($scope,$http){
 				}
 			}
 			for(var item in data){
-				if(data[item].profile)
+				if(data[item]==null)
+					continue;
+				if(data[item].profile!=null)
 					profile+=data[item].profile;
-				if(data[item].contact)
+				if(data[item].contact!=null)
 					contact += data[item].contact;
-				if(data[item].resume)
+				if(data[item].resume!=null)
 					resume += data[item].resume;
-				if(data[item].project)
+				if(data[item].project!=null)
 					project += data[item].project;
-				if(data[item].blog)
+				if(data[item].blog!=null)
 					blog += data[item].blog;
-				if(data[item].facebook)
+				if(data[item].facebook!=null)
 					facebook += data[item].facebook;
-				if(data[item].linkedin)
+				if(data[item].linkedin!=null)
 					linkedin += data[item].linkedin;
 			}
 			var sorted = new Array();
